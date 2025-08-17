@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lupa Password</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../login/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <h1>Lupa Password</h1>
+        <div class="container">
+            <div class="sign-up-content">
+                <form id="reset" method="POST" class="signup-form" action="reset-pass.php">
+                    <h2 class="form-title">Silahkan isi data</h2>
+                    <div class="form-radio">
+                        <input type="radio" name="level" value="Pembeli" id="Pembeli" checked="checked" />
+                        <label for="Pembeli">Pembeli</label>
+
+                        <input type="radio" name="level" value="Penjual" id="Penjual" />
+                        <label for="Penjual">Penjual</label>
+
+                    </div>
+                    
+                    <div>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Username" required/>
+                    </div>
+
+                    <div>
+                        <input type="email" name="penjual_email" id="penjual_email"class="form-control" placeholder="Email" required/>
+                    </div>
+
+                    <div>
+                        <input type="date" name="penjual_ttl" id="penjual_ttl"class="form-control" required/>
+                    </div>
+                    <br>
+                    <div class="form-textbox">
+                        <input type="submit" name="reset-pass" id="submit" class="submit" value="Lupa Password" />
+                    </div>
+                    
+                </form>
+
+                <p class="loginhere">
+                    Belum memiliki akun ?<a href="register.html" class="loginhere-link"> Daftar</a>
+                    <br>
+                    Sudah punya akun ?<a href="login.php" class="loginhere-link"> Masuk</a>
+                    <br>
+                    <a href="login.php" class="loginhere-link"> Kembali</a>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="../login/vendor/jquery/jquery.min.js"></script>
+    <script src="../login/js/main.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="dist/jquery.validate.js"></script>
+    <script>
+        $().ready(function() {
+            $("#reset").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 2
+                    },
+                    penjual_email: {
+                        required: true,
+                        email: true
+                    },
+                    penjual_ttl: "required"
+
+                },messages:{
+                    username: {
+                        required: "Masukkan username",
+                        minlength: "Username harus lebih dari 2 huruf"
+                    },
+                    penjual_email: {
+                        required: "Masukkan email",
+                        email: "Contoh format email abcd@domain.com"
+                    }}
+                });
+        });
+        </script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
