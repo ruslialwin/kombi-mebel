@@ -27,7 +27,7 @@ Untuk menjalankan project, dibutuhkan server web untuk karena aplikasi berbasis 
 ## 💻 Cara Menjalankan Proyek Secara Lokal
 1. **Clone repository ini**
 ```bash
-git clone https://github.com/ruslialwin/kombimebel.git
+git clone https://github.com/ruslialwin/kombi-mebel.git
 ```
 2. **Pindahkan folder kombimebel ke dalam direktori htdocs (untuk XAMPP)**
 3. **Import file database db_kombimebel.sql yang terdapat dalam folder database**
@@ -71,7 +71,7 @@ To run this project, you need a web server because it's a backend-based applicat
 ## 💻 How to Run the Project Locally
 1. **Clone this repository**
 ```bash
-git clone https://github.com/ruslialwin/kombimebel.git
+git clone https://github.com/ruslialwin/kombi-mebel.git
 ```
 2. **Move the kombimebel folder into the htdocs directory (for XAMPP)**
 3. **Import the db_kombimebel.sql database file located in the database folder**
